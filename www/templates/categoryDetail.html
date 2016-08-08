@@ -1,0 +1,47 @@
+<ion-view view-title="{{category.name}}">
+    <ion-content ng-class="{expanded:isExpanded}">
+            
+            <div ng-show="!chunkedData.length">
+                <ion-content class="has-header has-tabs-top padding">
+                    <h3>No existen locales registrados para esta categoría</h3>
+                </ion-content>
+            </div>
+
+            <div class="row"  ng-repeat="shops in chunkedData">
+                <div class="col-100" ng-repeat="shop in shops">
+                    <div class="card" >
+                        <div class="item item-text-wrap" >
+
+                            
+                            <div class="item item-body">
+                                <h2>{{shop.razonSocialAct}}</h2>
+                                <a href="#/app/shop/{{shop.idAct}}">
+                                <img class="full-image" src="http://186.5.121.17:9090/cashback/imagenes/{{shop.logoAct}}" >
+                                </a>
+                                
+                                <p>{{shop.sloganAct}}</p>
+                                <p>{{shop.servicioAct}}</p>
+                                <!--
+                                <div class="tabs tabs-dark tabs-icon-top static">
+                                    <a class="tab-item"> 
+                                        <i class="icon ion-thumbsup"></i> Like </a>
+                                    <a class="tab-item"> <i class="icon ion-chatbox"></i> Comentarios</a>
+                                </div>
+                                -->
+                            </div>
+
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+        
+    </ion-content>
+
+
+    <ion-footer-bar align-title="left" class="bar-positive">
+        <!--<h3 class="title">Somos Global</h3>-->
+    </ion-footer-bar>
+
+</ion-view>

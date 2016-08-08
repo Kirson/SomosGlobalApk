@@ -1,0 +1,29 @@
+<ion-view view-title="Ingreso" align-title="left">
+    <ion-content style="background: url(img/material-background.jpg) center; background-size: cover;">
+        <div ng-controller="LoginCtrl">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Somos Global</h1>
+            </div>
+        </div>
+        <div class="list">
+            <ion-md-input class="input" placeholder="C&eacute;dula" highlight-color="balanced" type="text" ng-maxlength='13' ng-model="user.userName"></ion-md-input>
+            <ion-md-input placeholder="Password" highlight-color="energized" type="password" ng-model="user.password"></ion-md-input>
+        </div>
+        <div class="padding">
+            <button ng-click="login()" class="button button-full button-assertive ink">Ingresar</button>
+            <button ng-click="visitanteLogin()" class="button button-full button-energized ink">Invitado</button>
+            <button ng-click="goToRegisterUser()" class="button button-full button-royal ink">Registrarse</button>
+        </div>
+        </div>
+        <div ng-controller="WelcomeCtrl">
+        <div class="button-bar social-login">
+            <!--
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
+            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>-->
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900" ng-click="facebookSignIn()">Facebook</button>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

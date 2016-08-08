@@ -1,0 +1,18 @@
+<ion-view view-title="Categor&iacute;as">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <!-- <div class="content has-header"> -->
+            <ion-list>
+                <ion-item ng-repeat="category in categories" 
+                            class="item-icon-left" href="#/app/{{url}}/{{category.catId}}"><!-- href="#/app/{{category.name}}/id/{{category.catid}}">-->
+                        <i class = "{{category.catimagen}}"></i>
+                        <h2>{{category.catNombre}}</h2>
+                        <p> {{category.catNombre}}</p>
+                </ion-item>
+            </ion-list>
+        <!-- </div> -->
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-positive">
+        <!--<h3 class="title">Somos Global</h3>-->
+    </ion-footer-bar>
+
+</ion-view>

@@ -1,0 +1,42 @@
+<ion-view view-title="Galer&iacute;a">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div ng-controller="ProductCtrl">
+
+        <div ng-show="!showGallery">
+                <ion-content class="has-header has-tabs-top padding">
+                    <h3>Zona en construcci&oacute;n</h3>
+                </ion-content>
+            </div>
+
+        <!--
+        <ion-list>
+                <ion-item ng-repeat="product in products" 
+                            class="item-icon-left" href="#/app/{{url}}/{{product.catId}}"><!-- href="#/app/{{category.name}}/id/{{category.catid}}">
+                        <i class = "{{category.catimagen}}"></i>
+                        <h2>{{product.nombreAct}}</h2>
+                        <p> {{product.actividadAct}}</p>
+                </ion-item>
+            </ion-list>
+            -->
+        <div class="list">
+            <div ng-repeat="product in products" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">11
+                    <h2>{{product.nombreAct}}</h2>
+                    <img class="full-image" src="http://186.5.121.17:9090/cashback/imagenes/{{product.fotoAct}}">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item stable-bg assertive">
+                        <i class="icon ion-heart"></i>
+                        {{product.actividadAct}}
+                    </a>
+                    <a class="tab-item stable-bg positive-900">
+                        <i class="icon ion-chatbubbles"></i>
+                        {{product.razonSocialAc}}
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

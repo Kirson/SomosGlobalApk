@@ -1,0 +1,18 @@
+<ion-view view-title="SOMOS GLOBAL: Registro">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div ng-controller="LoginCtrl">
+        <h4 class="content padding double-padding-x">Registre sus datos</h4>
+        <div class="list">
+            <ion-md-input placeholder="Nombre" highlight-color="dark" ng-model="user.nombre" type="text"></ion-md-input>
+            <ion-md-input placeholder="Apellidos" highlight-color="dark" ng-model="user.apellido" type="text"></ion-md-input>
+            <ion-md-input placeholder="C&eacute;dula" highlight-color="dark" ng-model="user.userName" type="text"></ion-md-input>
+            <ion-md-input placeholder="Clave" highlight-color="dark" ng-model="user.password" type="password"></ion-md-input>
+            <ion-md-input placeholder="Repetir Clave" highlight-color="dark" ng-model="user.password2" type="password"></ion-md-input>
+            <ion-md-input placeholder="Correo electr&oacute;nico" highlight-color="dark" ng-model="user.correo" type="text"></ion-md-input>
+        </div>
+        <div class="padding">
+            <button   class="button button-full button-positive ink"   ng-click="gotoTerms()">Enviar</button> 
+        </div>
+        </div>
+    </ion-content>
+</ion-view>
