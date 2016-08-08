@@ -59,6 +59,11 @@ angular.module('UserControllers', [])
   //This method is executed when the user press the "Login with facebook" button
   $scope.facebookSignIn = function() {
 
+     $ionicPopup.alert({
+           title: 'Información',
+           template: 'Usted ingresar&aacute; a la aplicaci&oacute;n utilizando los datos de su cuenta de facebook'
+         });
+
     facebookConnectPlugin.getLoginStatus(function(success){
      if(success.status === 'connected'){
         // the user is logged in and has authenticated your app, and response.authResponse supplies

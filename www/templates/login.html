@@ -14,15 +14,14 @@
         <div class="padding">
             <button ng-click="login()" class="button button-full button-assertive ink">Ingresar</button>
             <button ng-click="visitanteLogin()" class="button button-full button-energized ink">Invitado</button>
+
             <button ng-click="goToRegisterUser()" class="button button-full button-royal ink">Registrarse</button>
+
         </div>
         </div>
         <div ng-controller="WelcomeCtrl">
-        <div class="button-bar social-login">
-            <!--
-            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
-            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>-->
-            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900" ng-click="facebookSignIn()">Facebook</button>
+        <div class="padding">
+            <button class="button button-full button-positive ink" ng-click="facebookSignIn()">Facebook</button>
         </div>
         </div>
     </ion-content>

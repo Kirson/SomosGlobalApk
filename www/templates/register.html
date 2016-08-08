@@ -1,6 +1,7 @@
 <ion-view view-title="SOMOS GLOBAL: Registro">
-    <ion-content ng-class="{expanded:$scope.isExpanded}">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="positive-bg">
         <div ng-controller="LoginCtrl">
+        <div class="positive-bg">
         <h4 class="content padding double-padding-x">Registre sus datos</h4>
         <div class="list">
             <ion-md-input placeholder="Nombre" highlight-color="dark" ng-model="user.nombre" type="text"></ion-md-input>
@@ -12,6 +13,7 @@
         </div>
         <div class="padding">
             <button   class="button button-full button-positive ink"   ng-click="gotoTerms()">Enviar</button> 
+        </div>
         </div>
         </div>
     </ion-content>
