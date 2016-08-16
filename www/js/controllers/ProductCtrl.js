@@ -1,36 +1,56 @@
 angular.module('starter.ProductCtrl',[])
-.controller('ProductCtrl', function($scope, $stateParams, $timeout,  Products, Shops,ionicMaterialInk, ionicMaterialMotion) {
+.controller('ProductCtrl', function($scope, $stateParams, $timeout,  Products, Shops,
+									ActorReferences, ionicMaterialInk, ionicMaterialMotion) {
 
-    //console.log("product ctrl");
-	//$scope.shop = Shops.get($stateParams.shopId);
-	$scope.products = Products.getProducts();
+	var imageReferences = [];
+	var references = [];
+   
 	$scope.hasProducts = true;
 	$scope.showGallery=false;
-console.log("productos");
-console.log($scope.products);
+	$timeout(function() {
+    	references = ActorReferences.getReferences($stateParams.shopId).then(function(data){
+    		console.log( "product ctrl" );
+    	
+			$scope.references = data;
+    		console.log(  $scope.references);
 
-	// if ($stateParams.shopId != undefined){
-	// 	$scope.shops = Shops.get($stateParams.shopId);
-	// }
-	
-	// function chunk(arr, size) {
-	//   var newArr = [];
-	//   for (var i=0; i<arr.length; i+=size) {
-	//     newArr.push(arr.slice(i, i+size));
-	//   }
-	//   return newArr;
-	// }
+	    });
+    }, 1000);
+    console.log("1 references");
+    console.log(references);
+    console.log("2 references");
+    console.log($scope.references);
 
-	//$scope.chunkedData = chunk($scope.shops, 1);// to make 2 columns
 
-    //$scope.product = Products.get($stateParams.shopId);
-    //console.log( $scope.product );
+    console.log("image references");
+    /*
+    for (var i=0; i<$scope.references.length; i+=size) {
+    	console.log(i);
+	    if($scope.references[i].idCg.idCg==82){
+           	console.log("+++++");
+           	 imageReferences.push(item);
+           }
+	  };
 
-    //if($scope.product==undefined){
-    //	$scope.hasProducts=false;
-    //}
+*/
+       var j=0;
+	  angular.forEach($scope.references,function(item){
+           console.log(j);
+           console.log(item);
+           j++;
+           /*
+            if (item.idCg.idCg==82) {
+                console.log("111");
+            }else{
+            	console.log("222");
+            }*/
+        });
+
+  console.log(imageReferences);
 
     $timeout(function () {
-    ionicMaterialMotion.fadeSlideInRight();
-}, 300);
+    	ionicMaterialMotion.fadeSlideInRight();
+	}, 300);
+
+
 });

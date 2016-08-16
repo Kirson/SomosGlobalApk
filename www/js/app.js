@@ -9,7 +9,8 @@ angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
                             'UserControllers','SocialServices','starter.MenuCtrl',
                             'starter.CategoryServices','starter.ProductServices',
                             'starter.ShopServices', 'starter.CategoryCtrl', 
-                            'starter.ShopCtrl', 'starter.ProductCtrl','starter.ProfileCtrl'])
+                            'starter.ShopCtrl', 'starter.ProductCtrl','starter.ProfileCtrl',
+                            'starter.ActorReferenceServices'])
 
 .run(function($ionicPlatform, $rootScope) {
     $rootScope.restUrl = "http://186.5.121.17:9090/SomosGlobal/webresources/";

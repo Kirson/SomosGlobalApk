@@ -4,7 +4,7 @@ angular.module('starter.ShopCtrl', [])
 	// $scope.chunkedData = null;
 	Shops.getLocales($stateParams.catId).then(function(shops){
 			$scope.shops =  shops;
-			    console.log( "sub category " + $stateParams.catId);
+			    console.log( "sub category ==>" + $stateParams.catId);
 			    // console.log(  $scope.categories );
 			    $scope.chunkedData = chunk($scope.shops, 1);// to make 2 columns
 			    console.log("shops " +$scope.shops);

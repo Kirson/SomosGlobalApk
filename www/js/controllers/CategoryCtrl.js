@@ -6,7 +6,7 @@ angular.module('starter.CategoryCtrl', [])
 	    $scope.allCategories = Categories.getCategories().then(function(allCategories){
 			$scope.categories =  allCategories;
 		    console.log( "category ctrl" );
-		    // console.log(  $scope.categories );
+		     console.log(  $scope.categories );
 			
 		});
 		$scope.url = "subcategory";
@@ -17,7 +17,7 @@ angular.module('starter.CategoryCtrl', [])
 		    
 		    $scope.allCategories = Categories.getSubCategoriesNivel1($stateParams.catId).then(function(subCategories){
 				$scope.categories =  subCategories;
-			    console.log( "sub category " + $stateParams.catId);
+			    console.log( "sub category 1" + $stateParams.catId);
 			    // console.log(  $scope.categories );
 				
 			});
@@ -26,7 +26,7 @@ angular.module('starter.CategoryCtrl', [])
 		if ($stateParams.catId.length == 4){
 		$scope.allCategories = Categories.getSubCategoriesNivel2($stateParams.catId).then(function(subCategories){
 			$scope.categories =  subCategories;
-			    console.log( "sub category " + $stateParams.catId);
+			    console.log( "sub category  2" + $stateParams.catId);
 			    // console.log(  $scope.categories );
 			});
 			$scope.url = "sucategoryDetail";
