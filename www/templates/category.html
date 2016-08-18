@@ -3,8 +3,8 @@
         <!-- <div class="content has-header"> -->
             <ion-list>
                 <ion-item ng-repeat="category in categories" 
-                            class="item-icon-left" href="#/app/{{url}}/{{category.catId}}"><!-- href="#/app/{{category.name}}/id/{{category.catid}}">-->
-                        <i class = "{{category.catimagen}}"></i>
+                            class="item-avatar item" href="#/app/{{url}}/{{category.catId}}"><!-- href="#/app/{{category.name}}/id/{{category.catid}}">-->
+                        <img class="full-image" src="http://186.5.121.17:9090/cashback/imagenes/{{category.catImagen}}"></img>
                         <h2>{{category.catNombre}}</h2>
                         <p> {{category.catNombre}}</p>
                 </ion-item>

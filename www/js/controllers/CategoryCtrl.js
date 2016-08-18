@@ -9,8 +9,10 @@ angular.module('starter.CategoryCtrl', [])
 		     console.log(  $scope.categories );
 			
 		});
-		$scope.url = "subcategory";
+		// $scope.url = "subcategory";// este manda a las subcategorías
+		$scope.url = "sucategoryDetail";// este manda a los locales
 	}
+	/*
 	else{
 
 		if ($stateParams.catId.length == 2){
@@ -31,5 +33,5 @@ angular.module('starter.CategoryCtrl', [])
 			});
 			$scope.url = "sucategoryDetail";
 		}
-	}
+	}*/
 });
