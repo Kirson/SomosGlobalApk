@@ -4,13 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
+angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput', 'ngCordova',
                             'starter.controllers','starter.UserServices',
                             'UserControllers','SocialServices','starter.MenuCtrl',
                             'starter.CategoryServices','starter.ProductServices',
                             'starter.ShopServices', 'starter.CategoryCtrl', 
                             'starter.ShopCtrl', 'starter.ProductCtrl','starter.ProfileCtrl',
-                            'starter.ActorReferenceServices'])
+                            // 'starter.ActorReferenceServices'
+                            ])
 
 .run(function($ionicPlatform, $rootScope) {
     $rootScope.restUrl = "http://186.5.121.17:9090/SomosGlobal/webresources/";
