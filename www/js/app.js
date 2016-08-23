@@ -97,7 +97,7 @@ angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
             }
         }
     })
-
+    /*
     .state('app.login', {
         url: '/login',
         views: {
@@ -110,13 +110,13 @@ angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
             }
         }
     })
-    /*
+    */
+    
     .state('app.login', {
         url: '/login',
         templateUrl: 'templates/login.html',
         controller: 'LoginCtrl'
-    })*/
-
+    })
     .state('app.profile', {
         url: '/profile',
         views: {
