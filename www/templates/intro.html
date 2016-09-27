@@ -1,0 +1,71 @@
+<ion-view title="">
+  <ion-nav-bar class="bar bar-footer bar-positive" align-title="center">  
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear no-animation"
+      ng-click="startApp()" ng-if="!slideIndex">
+      <i class="ion-log-in"></i> 
+    </button>
+    <button class="button button-positive button-clear no-animation"
+      ng-click="previous()" ng-if="slideIndex > 0">
+      <i class="ion-arrow-left-c"></i> 
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right"> 
+    <button class="button button-positive button-clear no-animation"
+      ng-click="next()" ng-if="slideIndex != 2">
+      <i class="ion-arrow-right-c"></i>
+    </button>
+    <button class="button button-positive button-clear no-animation"
+      ng-click="startApp()" ng-if="slideIndex == 2">
+       <i class="ion-home"></i> 
+    </button>
+  </ion-nav-buttons>
+  </ion-nav-bar>
+<ion-content>
+  <ion-slide-box class="slider"  on-slide-changed="slideChanged(index)">
+    <ion-slide class="slider-slides">
+      <div class="slider-slide padding">
+      <div id="logo">
+        <img src="img/logo.png">
+      </div>
+      <p>
+        Somos Global es una plataforma web desarrollada en Ecuador que cuenta
+        con la mayor red de prestaci&oacute;n de servicios de Geolocalizaci&oacute;n y
+        fidelizaci&oacute;n de clientes, adem&aacute;s es un sistema de b&uacute;squeda a 
+        trav&eacute;s de Internet que genera una conexi&oacute;n entre tu negocio y clientes.
+      </p>
+      <p>
+        Disfrute de la mejor aplicaci&oacute;n de fidelizaci&oacute;n
+      </p>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="slider-slides">
+      <div class="slider-slide padding">
+        <div id="logo">
+          <img src="img/logo.png">
+        </div>
+        <p>
+          Tiene como objetivo potenciar las ventas de los establecimientos afiliados a la red, como
+          tambi&eacute;n incrementar grados de satisfacci&oacute;n en los consumidores mediante la fijaci&oacute;n de
+          imagen, marca, producto, promociones y ofertas de alta calidad.
+        </p>
+      
+      </div>
+    </ion-slide>
+
+    <ion-slide class="slider-slides">
+      <div class="slider-slide padding">
+      <div id="logo">
+        <img src="img/imapp.jpg">
+      </div>
+      <p>
+        Adelante!
+      </p>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+  </ion-content>
+
+</ion-view>

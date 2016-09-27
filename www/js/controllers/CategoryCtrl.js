@@ -1,5 +1,16 @@
 angular.module('starter.CategoryCtrl', [])
-.controller('CategoryCtrl', function($scope, $stateParams, $timeout,  Categories) {
+.controller('CategoryCtrl', function($scope, $stateParams, $timeout,  Categories, ionicMaterialInk) {
+	
+    $scope.$parent.clearFabs();
+    $timeout(function() {
+        $scope.$parent.showHeader();
+        //$scope.$parent.clearFabs();
+        $scope.isExpanded = false;
+       // $scope.$parent.setExpanded(false);
+       // $scope.$parent.setHeaderFab(false);
+    }, 0);
+    ionicMaterialInk.displayEffect();
+
 	console.log("id " + $stateParams.catId );
 	if ($stateParams.catId === undefined){
 

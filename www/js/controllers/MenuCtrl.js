@@ -1,7 +1,7 @@
 // 'use strict';
 
 angular.module('starter.MenuCtrl', [])
-.controller('MenuCtrl', function($scope, $ionicModal, $ionicPopover, $timeout) {
+.controller('MenuCtrl', function($scope, $ionicModal, $ionicPopover, $timeout,ionicMaterialInk) {
 
 console.log("menu");
 	$scope.tasks = [

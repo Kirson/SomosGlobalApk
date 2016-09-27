@@ -87,6 +87,25 @@ angular.module('starter.controllers', [])
     };
 })
 
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+   console.log("Intro");
+  // Called to navigate to the main app
+  $scope.startApp = function() {
+    $state.go('app.login');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+})
+
 .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
     $scope.$parent.clearFabs();
     $timeout(function() {
@@ -116,11 +135,15 @@ angular.module('starter.controllers', [])
 
 .controller('ProfileCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
     // Set Header
-    $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
-    $scope.isExpanded = false;
-    $scope.$parent.setExpanded(false);
-    $scope.$parent.setHeaderFab(false);
+    $timeout(function() {
+        $scope.$parent.showHeader();
+        //$scope.$parent.clearFabs();
+        $scope.isExpanded = false;
+       // $scope.$parent.setExpanded(false);
+       // $scope.$parent.setHeaderFab(false);
+    }, 0);
+    ionicMaterialInk.displayEffect();
 
     // Set Motion
     $timeout(function() {

@@ -1,5 +1,5 @@
 angular.module('starter.ProfileCtrl',[])
-.controller('ProfileCtrl', function($scope, $stateParams, $timeout,  $rootScope,$ionicLoading,FacebookService, User) {
+.controller('ProfileCtrl', function($scope, $stateParams, $timeout,  $rootScope,$ionicLoading,FacebookService, User,ionicMaterialInk) {
 
   $scope.user = $rootScope.user;
   $scope.facebookuser =FacebookService.getUser('facebook');

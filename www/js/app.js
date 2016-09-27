@@ -5,10 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
+                            'angularMoment','ngMap','ngResource',
+                            'ngCordova','slugifier','ionic.contrib.ui.tinderCards','youtube-embed',
                             'starter.controllers','starter.UserServices',
                             'UserControllers','SocialServices','starter.MenuCtrl',
                             'starter.CategoryServices','starter.ProductServices',
-                            'starter.ShopServices', 'starter.CategoryCtrl', 
+                            'starter.ShopServices', 'starter.CategoryCtrl', 'starter.ActorReferenceServices',
                             'starter.ShopCtrl', 'starter.ProductCtrl','starter.ProfileCtrl',
                             'starter.ActorReferenceServices'])
 
@@ -97,7 +99,7 @@ angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
             }
         }
     })
-    /*
+    
     .state('app.login', {
         url: '/login',
         views: {
@@ -110,12 +112,17 @@ angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
             }
         }
     })
-    */
-    
-    .state('app.login', {
-        url: '/login',
-        templateUrl: 'templates/login.html',
-        controller: 'LoginCtrl'
+    .state('app.intro', {
+        url: '/intro',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/intro.html',
+                controller: 'IntroCtrl'
+            },
+            'fabContent': {
+                template: ''
+            }
+        }
     })
     .state('app.profile', {
         url: '/profile',
@@ -221,5 +228,5 @@ angular.module('starter', ['ionic',  'ionic-material', 'ionMdInput',
     ;
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/login');
+    $urlRouterProvider.otherwise('/app/intro');
 });

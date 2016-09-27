@@ -1,5 +1,5 @@
-angular.module('starter.ShopCtrl', [])
-.controller('ShopCtrl', function($scope, $stateParams, $timeout,  Shops, Categories) {
+angular.module('starter.ShopCtrl', ['ngCordova'])
+.controller('ShopCtrl', function($scope, $stateParams, $timeout,  Shops, Categories,  $cordovaSocialSharing ,$window) {
 
 	// $scope.chunkedData = null;
 	Shops.getLocales($stateParams.catId).then(function(shops){
@@ -32,9 +32,29 @@ angular.module('starter.ShopCtrl', [])
 	  return newArr;
 	}
 
-	
-	// $scope.chunkedData = $scope.shops;
+// var output = "";
+// for (var property in $cordovaSocialSharing) {
+//   output += property + ': ' + $cordovaSocialSharing[property]+'; ';
+// }
+// console.log(output);
 
-    // $scope.category = Categories.get($stateParams.catId);
+	$scope.shareAnywhere = function(message, image, link) {
+        $cordovaSocialSharing.share(message, image, link);    
+    }
+ 
+    $scope.shareViaTwitter = function(message, image, link) {
+            $cordovaSocialSharing.shareViaTwitter(message, image, link).then(function(result) {
+
+        }, function(error) {
+            alert("Imposible compartir en Twitter");
+        });
+    }
+    $scope.shareViaFb = function(message, image, link) {
+            $cordovaSocialSharing.shareViaFacebook(message, image, link).then(function(result) {
+
+        }, function(error) {
+            alert("Imposible compartir en Facebook");
+        });
+    }
 
 })

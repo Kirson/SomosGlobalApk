@@ -1,7 +1,7 @@
 angular.module('starter.LoginCtrl', ['ionic','ngCordova'])
 .controller('LoginCtrl1', function($scope,$rootScope,$stateParams, $location,$cordovaFacebook, 
                                   $cordovaGooglePlus, $ionicLoading,$cordovaGeolocation, 
-                                  User, $ionicPopup) {
+                                  User, $ionicPopup,ionicMaterialInk) {
  console.log("login ctrl ");
 
   if ($rootScope.user === undefined){

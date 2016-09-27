@@ -167,8 +167,14 @@ angular.module('UserControllers', [])
 })
 
 .controller('LoginCtrl', function($scope,$rootScope,$stateParams, $location, 
-                                   $ionicLoading, User, $ionicPopup) {
+                                   $ionicLoading, User, $ionicPopup, $timeout, ionicMaterialInk) {
  console.log("login ctrl ");
+
+ $scope.$parent.clearFabs();
+    $timeout(function() {
+        $scope.$parent.hideHeader();
+    }, 0);
+    ionicMaterialInk.displayEffect();
 
   if ($rootScope.user === undefined){
     $rootScope.user = {
@@ -197,7 +203,7 @@ $scope.user = $rootScope.user;
       if($scope.user.userName==undefined ||$scope.user.userName==null ||$scope.user.userName==''){
         validate = false;
         $ionicPopup.alert({
-           title: 'Información',
+           title: 'Informaci&oacute;n',
            template: 'La c&eacute;dula es requerida'
          });
       }
